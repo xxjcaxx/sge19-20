@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="cliweb.list">
+      <field name="name">cliweb list</field>
+      <field name="model">cliweb.cliweb</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="cliweb.action_window">
+      <field name="name">cliweb window</field>
+      <field name="res_model">cliweb.cliweb</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="cliweb.action_server">
+      <field name="name">cliweb server</field>
+      <field name="model_id" ref="model_cliweb_cliweb"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="cliweb" id="cliweb.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="cliweb.menu_1" parent="cliweb.menu_root"/>
+    <menuitem name="Menu 2" id="cliweb.menu_2" parent="cliweb.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="cliweb.menu_1_list" parent="cliweb.menu_1"
+              action="cliweb.action_window"/>
+    <menuitem name="Server to list" id="cliweb" parent="cliweb.menu_2"
+              action="cliweb.action_server"/>
+    -->
+  </data>
+</odoo>
