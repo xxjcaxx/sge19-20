@@ -2,14 +2,18 @@
 
 from odoo import models, fields, api
 
-# class cliweb(models.Model):
-#     _name = 'cliweb.cliweb'
 
-#     name = fields.Char()
-#     value = fields.Integer()
-#     value2 = fields.Float(compute="_value_pc", store=True)
-#     description = fields.Text()
-#
-#     @api.depends('value')
-#     def _value_pc(self):
-#         self.value2 = float(self.value) / 100
+class hotel(models.Model):
+    _name = 'cliweb.hotel'
+    _description = "Els hotels"
+    name = fields.Char()
+    gallery = fields.One2many('cliweb.gallery','hotel')
+
+
+class gallery(models.Model):
+    _name = 'cliweb.gallery'
+    _description = "Els hotels"
+    name = fields.Char()
+    hotel = fields.Many2one('cliweb.hotel')
+    photo = fields.Binary()
+
