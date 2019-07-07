@@ -12,7 +12,7 @@
       </field>
     </record>
 
-     <record model="ir.ui.view" id="cliweb.hotel_form">
+    <record model="ir.ui.view" id="cliweb.hotel_form">
       <field name="name">cliweb hotel form</field>
       <field name="model">cliweb.hotel</field>
       <field name="arch" type="xml">
@@ -20,7 +20,28 @@
           <sheet>
             <group>
               <field name="name"/>
-              <field name="gallery"/>
+              <field name="gallery">
+                <kanban>
+                  <!--list of field to be loaded -->
+                  <field name="name" />
+                  <field name="id" /> <!-- És important afegir el id per al record.id.value -->
+                  <field name="photo" />
+
+
+                  <templates>
+                    <t t-name="kanban-box">
+                      <div class="oe_product_vignette cliweb_gallery_kanban">
+                        <a type="open">
+                          <img class="oe_kanban_image"
+                               t-att-src="kanban_image('cliweb.gallery', 'photo', record.id.value)" />
+                        </a>
+
+                      </div>
+                    </t>
+                  </templates>
+                </kanban>
+              </field>
+
             </group>
           </sheet>
         </form>
