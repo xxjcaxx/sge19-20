@@ -1,8 +1,15 @@
 <odoo>
     <data>
-        <template id="assets_backend" name="reserves assets" inherit_id="web.assets_backend">
+        <!-- CSS -->
+        <template id="cliweb_assets_css" name="cliweb assets css" inherit_id="web.assets_backend">
             <xpath expr="//script[last()]" position="after">
                 <link rel="stylesheet" href="/cliweb/static/src/css/cliweb.css"/>
+            </xpath>
+        </template>
+        <!--Javascript-->
+        <template id="cliweb_assets_js" name="cliweb assets js" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                        <script type="text/javascript" src="/cliweb/static/src/js/cliweb.js"/>
             </xpath>
         </template>
     </data>

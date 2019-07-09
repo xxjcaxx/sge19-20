@@ -6,8 +6,8 @@
       <field name="model">cliweb.hotel</field>
       <field name="arch" type="xml">
         <tree>
-          <field name="name"/>
-          <field name="gallery"/>
+          <field name="name" widget="nom"/>
+          <field name="gallery" class="cliweb_x2m_tree"/>
         </tree>
       </field>
     </record>
@@ -20,7 +20,7 @@
           <sheet>
             <group>
               <field name="name"/>
-              <field name="gallery">
+              <field name="gallery" context="{'default_hotel':active_id}">
                 <kanban>
                   <!--list of field to be loaded -->
                   <field name="name" />
@@ -56,7 +56,7 @@
             <group>
               <field name="name"/>
               <field name="hotel"/>
-              <field name="photo"/>
+              <field name="photo" widget="image"/>
             </group>
           </sheet>
         </form>

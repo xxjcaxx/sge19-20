@@ -17,3 +17,5 @@ class gallery(models.Model):
     hotel = fields.Many2one('cliweb.hotel')
     photo = fields.Binary()
 
+
+

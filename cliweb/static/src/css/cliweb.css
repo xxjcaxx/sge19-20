@@ -1,3 +1,5 @@
+/*** CSS Simple ***/
+
 .o_kanban_view.o_kanban_ungrouped .o_kanban_record.cliweb_gallery_kanban {
 
 width: 100px;
@@ -9,3 +11,9 @@ width: 100%;
 
 }
 
+
+/*  CSS en el tree  */
+
+.cliweb_x2m_tree{
+background: #eeeeee;
+}
