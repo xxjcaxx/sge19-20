@@ -1,3 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_cliweb_hotel,cliweb.hotel,model_cliweb_hotel,,1,1,1,1
 access_cliweb_gallery,cliweb.gallery,model_cliweb_gallery,,1,1,1,1
+access_cliweb_reserva,cliweb.reserva,model_cliweb_reserva,,1,1,1,1

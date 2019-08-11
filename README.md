@@ -10,3 +10,4 @@ Exemples del client web, de mès fàcil a més complex:
 
 **Un widget simple**: En el tree dels hotels, hem fet un widget heretat de FieldsChar per mostrar el contingut amb un altre color. Cal mirar cóm s'afegeix al template del _bundle_ i el fitxer cliweb.js.
 
+**Un widget complex**: En el formulari de les reserves, el nom de cada reserva té un format especial amb un link a l'hotel de la reserva.

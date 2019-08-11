@@ -1,3 +1,4 @@
+// Widget nom per canviar el color
 console.log('Creacio del widget nom');
 odoo.define('cliweb.field_nom', function(require) {
     "use strict";
@@ -28,5 +29,34 @@ var  nom = FieldChar.extend({  // herència JS en Odoo
 	fieldRegistry.add('nom', nom); // Son cal fer widget="nom" en un field Char
 	return nom;
 });
+
+// Widget reserva per mostrar de forma diferent el name de la reserva:
+console.log('Creacio del widget reserva');
+
+odoo.define('cliweb.field_reserva',function(require){
+"use strict";
+var AbstractField = require('web.AbstractField');
+
+var reserva = AbstractField.extend({
+    //template: 'cliweb_reserva_template',
+    _renderReadonly: function () {
+        this._super.apply(this,arguments);
+        // render en  mode sols lectura; _renderEdit
+    },
+    start: function() {
+        var a = this._super.apply(this,arguments);
+        return a
+    },
+    init: function() { //inizialització amb valors
+        this._super.apply(this,arguments);
+    },
+});
+
+	var fieldRegistry = require('web.field_registry');
+	fieldRegistry.add('reserva', reserva); // Son cal fer widget="nom" en un field Char
+	return reserva;
+
+});
+
 
 

@@ -71,6 +71,28 @@
       <field name="view_mode">tree,form</field>
     </record>
 
+   <record model="ir.ui.view" id="cliweb.reserva_form">
+      <field name="name">cliweb reserva form</field>
+      <field name="model">cliweb.reserva</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <field name="name" widget="reserva"/>
+              <field name="hotel"/>
+              <field name="check_in"/><field name="check_out"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="cliweb.reserva_action_window">
+      <field name="name">cliweb reserva window</field>
+      <field name="res_model">cliweb.reserva</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
 
 
     <menuitem name="Client Web" id="cliweb.menu_root"/>
@@ -81,6 +103,12 @@
 
     <menuitem name="Hotel" id="cliweb.menu_1_list" parent="cliweb.menu_1"
               action="cliweb.hotel_action_window"/>
+
+    <menuitem name="Exemples complexos" id="cliweb.menu_2" parent="cliweb.menu_root"/>
+
+
+    <menuitem name="Reserves" id="cliweb.menu_2_list" parent="cliweb.menu_2"
+              action="cliweb.reserva_action_window"/>
 
   </data>
 </odoo>
