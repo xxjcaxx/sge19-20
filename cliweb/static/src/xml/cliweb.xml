@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="cliweb.template" xml:space="preserve">
+
+    <!-- Aquesta és la template original de FieldMany2one ampliada per mostrar les dades com si fora un kanban -->
+
+<t t-name="cliweb_m2o_template">
+    <t t-if="widget.mode === 'readonly'">
+        <a t-if="!widget.nodeOptions.no_open" t-att-tabindex="widget.attrs.tabindex" class="o_form_uri" href="#">
+            <div>Hola Mundo</div>
+        </a>
+        <span t-if="widget.nodeOptions.no_open"/>
+    </t>
+    <div t-if="widget.mode === 'edit'" class="o_field_widget o_field_many2one" aria-atomic="true">
+        <div class="o_input_dropdown">
+            <input type="text" class="o_input"
+                   t-att-barcode_events="widget.nodeOptions.barcode_events"
+                   t-att-tabindex="widget.attrs.tabindex"
+                   t-att-autofocus="widget.attrs.autofocus"
+                   t-att-placeholder="widget.attrs.placeholder"
+                   t-att-id="widget.idForLabel"/>
+            <a role="button" class="o_dropdown_button" draggable="false"/>
+        </div>
+        <button type="button" t-if="!widget.noOpen" class="fa fa-external-link btn btn-secondary o_external_button" tabindex="-1" draggable="false" aria-label="External link" title="External link"/>
+    </div>
+</t>
+
+</templates>

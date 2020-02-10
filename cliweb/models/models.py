@@ -7,6 +7,7 @@ class hotel(models.Model):
     _name = 'cliweb.hotel'
     _description = "Els hotels"
     name = fields.Char()
+    photo = fields.Binary()
     gallery = fields.One2many('cliweb.gallery','hotel')
 
 

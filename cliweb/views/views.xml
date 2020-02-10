@@ -19,7 +19,7 @@
         <form>
           <sheet>
             <group>
-              <field name="name"/>
+              <field name="name"/><field name="photo"/>
               <field name="gallery" context="{'default_hotel':active_id}">
                 <kanban>
                   <!--list of field to be loaded -->
@@ -79,7 +79,7 @@
           <sheet>
             <group>
               <field name="name" widget="reserva"/>
-              <field name="hotel"/>
+              <field name="hotel" widget="cliweb_m2o"/>
               <field name="check_in"/><field name="check_out"/>
             </group>
           </sheet>
